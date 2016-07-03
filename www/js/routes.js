@@ -20,21 +20,30 @@ angular.module('app.routes', [])
     }
   })
 
-  .state('side-menu21.cart', {
+  .state('side-menu21.recipes', {
     url: '/page2',
     views: {
       'side-menu21': {
-        templateUrl: 'templates/cart.html',
+        templateUrl: 'templates/recipes.html',
+        controller: 'cartCtrl'
+      }
+    }
+  })
+  .state('side-menu21.favorites', {
+    url: '/page0',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/favorites.html',
         controller: 'cartCtrl'
       }
     }
   })
 
-  .state('side-menu21.cloud', {
+  .state('side-menu21.allrecipes', {
     url: '/page3',
     views: {
       'side-menu21': {
-        templateUrl: 'templates/cloud.html',
+        templateUrl: 'templates/allrecipes.html',
         controller: 'cloudCtrl'
       }
     }
@@ -58,7 +67,7 @@ angular.module('app.routes', [])
     controller: 'signupCtrl'
   })
 
-$urlRouterProvider.otherwise('/side-menu21/page1')
+$urlRouterProvider.otherwise('/page4')
 
   
 
